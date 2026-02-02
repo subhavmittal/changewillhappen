@@ -1,0 +1,197 @@
+// Mobile Menu Toggle
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenuToggle.classList.toggle('active');
+    });
+}
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        mobileMenuToggle.classList.remove('active');
+    });
+});
+
+// Hero Carousel Functionality
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+const carouselDots = document.querySelectorAll('.carousel-dots .dot');
+const prevCarouselBtn = document.querySelector('.carousel-prev');
+const nextCarouselBtn = document.querySelector('.carousel-next');
+
+let currentSlide = 0;
+let carouselInterval;
+const slideInterval = 5000; // 5 seconds
+
+function showSlide(index) {
+    // Handle wraparound
+    if (index >= carouselSlides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = carouselSlides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+
+    // Update slides
+    carouselSlides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentSlide);
+    });
+
+    // Update dots
+    carouselDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlide);
+    });
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function startCarousel() {
+    carouselInterval = setInterval(nextSlide, slideInterval);
+}
+
+function stopCarousel() {
+    clearInterval(carouselInterval);
+}
+
+function resetCarousel() {
+    stopCarousel();
+    startCarousel();
+}
+
+// Initialize carousel if elements exist
+if (carouselSlides.length > 0) {
+    // Start auto-play
+    startCarousel();
+
+    // Navigation buttons
+    if (prevCarouselBtn) {
+        prevCarouselBtn.addEventListener('click', () => {
+            prevSlide();
+            resetCarousel();
+        });
+    }
+
+    if (nextCarouselBtn) {
+        nextCarouselBtn.addEventListener('click', () => {
+            nextSlide();
+            resetCarousel();
+        });
+    }
+
+    // Dot navigation
+    carouselDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            resetCarousel();
+        });
+    });
+
+    // Pause on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopCarousel);
+        carouselContainer.addEventListener('mouseleave', startCarousel);
+    }
+
+    // Keyboard navigation for carousel
+    document.addEventListener('keydown', (e) => {
+        if (document.querySelector('.lightbox.active')) return; // Don't interfere with lightbox
+
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+            resetCarousel();
+        }
+        if (e.key === 'ArrowRight') {
+            nextSlide();
+            resetCarousel();
+        }
+    });
+}
+
+
+// Newsletter Form
+const newsletterForm = document.querySelector('.newsletter-form');
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = newsletterForm.querySelector('input[type="email"]').value;
+        alert(`Thank you for subscribing with ${email}! You'll receive our updates soon.`);
+        newsletterForm.reset();
+    });
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+
+        const target = document.querySelector(href);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Navbar scroll effect
+const navbar = document.querySelector('.navbar');
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 100) {
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.boxShadow = 'none';
+    }
+
+    lastScroll = currentScroll;
+});
+
+// Intersection Observer for scroll animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.impact-item, .gallery-item, .project-card, .footer-section').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+
+// Add visible state styles
+const style = document.createElement('style');
+style.textContent = `
+    .visible {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+`;
+document.head.appendChild(style);

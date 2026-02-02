@@ -1,0 +1,241 @@
+/* Sponsors Page Styles */
+
+/* Hero Section */
+.sponsors-hero {
+  background-color: var(--primary-green);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsors-hero-content h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--white);
+  margin-bottom: var(--spacing-xs);
+}
+
+.sponsors-hero-content p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* Introduction Section */
+.sponsors-intro {
+  background-color: var(--white);
+  padding: var(--spacing-md) 0;
+}
+
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--medium-text);
+  margin: 0;
+}
+
+/* Year Sections */
+.sponsors-year {
+  padding: var(--spacing-md) 0;
+  background-color: var(--white);
+}
+
+.sponsors-year.alt-bg {
+  background-color: var(--light-bg);
+}
+
+.year-header {
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.year-header h2 {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: 2rem;
+  color: var(--primary-green);
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.year-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-red);
+  border-radius: 2px;
+}
+
+/* Grant Items */
+.grant-item {
+  background-color: var(--white);
+  padding: var(--spacing-md);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.grant-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.08);
+}
+
+.grant-item h3 {
+  color: var(--primary-green);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Multiple Grants List */
+.grants-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Single Grant Item Wrapper */
+.sponsors-year > .container > .grant-item {
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Sponsors Grid */
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--spacing-sm);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sponsor-card {
+  background-color: var(--white);
+  padding: var(--spacing-sm);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+  font-weight: 500;
+  color: var(--dark-text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsor-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* CTA Section */
+.sponsors-cta {
+  background-color: var(--earth-beige);
+  padding: var(--spacing-lg) 0;
+  text-align: center;
+  margin-top: var(--spacing-lg);
+}
+
+.sponsors-cta .cta-content h2 {
+  color: var(--primary-green);
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.sponsors-cta .cta-content p {
+  font-size: 1rem;
+  color: var(--medium-text);
+  margin-bottom: var(--spacing-md);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--primary-green);
+  padding: 0.875rem 1.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  border: 2px solid var(--primary-green);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-green);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(45, 90, 61, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: var(--spacing-xs);
+  }
+
+  .grants-list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+  }
+
+  .year-header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsors-hero {
+    min-height: 200px;
+  }
+
+  .sponsors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate | Change Will Happen</title>
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/donate.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/shared/logo.png" alt="Change Will Happen Logo">
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#about" class="dropdown-toggle">
+            About
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="sponsors.html">Our Sponsors</a></li>
+          </ul>
+        </li>
+        <li class="nav-dropdown">
+          <a href="index.html#projects" class="dropdown-toggle">
+            Projects
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="project-covid.html">COVID Relief</a></li>
+            <li><a href="project-battery.html">The Battery Project</a></li>
+            <li><a href="project-philippines.html">Medical Mission to Philippines</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#events">Events</a></li>
+        <li><a href="index.html#newsletter">Newsletter</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="donate.html" class="btn-donate">Donate</a></li>
+        <li><a href="volunteer.html" class="btn-volunteer">Get Involved</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="donate-hero">
+    <img src="images/home/donate.jpg" alt="Support Change Will Happen">
+    <div class="donate-hero-overlay">
+      <div class="donate-hero-content">
+        <h1>Make a Difference Today</h1>
+        <p>Your generosity transforms lives and communities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Statement Section -->
+  <section class="section impact-statement">
+    <div class="container">
+      <div class="impact-content">
+        <h2>Your Donation Creates Real Change</h2>
+        <p class="impact-intro">Change Will Happen is a 501(c)(3) non-profit organization committed to making healthcare accessible and protecting our environment. Your tax-deductible contribution directly funds critical programs that serve underserved communities and promote environmental sustainability.</p>
+
+        <div class="donation-impact-examples">
+          <h3>How Your Gift Helps</h3>
+          <div class="impact-examples-grid">
+            <div class="example-card">
+              <div class="example-amount">$25</div>
+              <p>Provides basic medical supplies for one family in need</p>
+            </div>
+            <div class="example-card">
+              <div class="example-amount">$50</div>
+              <p>Funds collection and distribution of 100 reusable batteries</p>
+            </div>
+            <div class="example-card">
+              <div class="example-amount">$100</div>
+              <p>Supports health screenings and consultations for multiple families</p>
+            </div>
+            <div class="example-card">
+              <div class="example-amount">$250+</div>
+              <p>Enables a complete medical mission or environmental program</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Form Section -->
+  <section class="section donate-section">
+    <div class="container">
+      <div class="donate-content">
+        <!-- Donation Form -->
+        <form class="donate-form" action="/submit-donation" method="POST">
+
+          <!-- Donation Amount -->
+          <div class="form-group donation-amount-group">
+            <label>Select Donation Amount <span class="required">*</span></label>
+            <div class="amount-options">
+              <div class="amount-option">
+                <input type="radio" id="amount25" name="donationAmount" value="25" required>
+                <label for="amount25">$25</label>
+              </div>
+              <div class="amount-option">
+                <input type="radio" id="amount50" name="donationAmount" value="50">
+                <label for="amount50">$50</label>
+              </div>
+              <div class="amount-option">
+                <input type="radio" id="amount100" name="donationAmount" value="100">
+                <label for="amount100">$100</label>
+              </div>
+              <div class="amount-option">
+                <input type="radio" id="amount250" name="donationAmount" value="250">
+                <label for="amount250">$250</label>
+              </div>
+              <div class="amount-option">
+                <input type="radio" id="amount500" name="donationAmount" value="500">
+                <label for="amount500">$500</label>
+              </div>
+              <div class="amount-option custom-amount">
+                <input type="radio" id="amountCustom" name="donationAmount" value="custom">
+                <label for="amountCustom">Custom Amount</label>
+              </div>
+            </div>
+            <div class="custom-amount-input" id="customAmountInput" style="display: none; margin-top: var(--spacing-sm);">
+              <input type="number" id="customAmount" name="customAmount" placeholder="Enter amount" min="1" step="0.01">
+            </div>
+          </div>
+
+          <!-- Donation Frequency -->
+          <div class="form-group">
+            <label for="frequency">Donation Type <span class="required">*</span></label>
+            <select id="frequency" name="frequency" required>
+              <option value="">Select</option>
+              <option value="one-time">One-time donation</option>
+              <option value="monthly">Monthly recurring donation</option>
+              <option value="quarterly">Quarterly recurring donation</option>
+              <option value="annual">Annual recurring donation</option>
+            </select>
+          </div>
+
+          <!-- Donor Information -->
+          <div class="form-group">
+            <label for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" name="fullName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+
+          <!-- Mailing Address for Tax Receipt -->
+          <div class="form-group">
+            <label for="address">Mailing Address</label>
+            <input type="text" id="address" name="address" placeholder="Street address">
+          </div>
+
+          <div class="form-group address-row">
+            <div class="address-field">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city">
+            </div>
+            <div class="address-field">
+              <label for="state">State</label>
+              <input type="text" id="state" name="state">
+            </div>
+            <div class="address-field">
+              <label for="zip">ZIP Code</label>
+              <input type="text" id="zip" name="zip">
+            </div>
+          </div>
+
+          <!-- Dedication -->
+          <div class="form-group">
+            <label for="dedication">Dedication (Optional)</label>
+            <textarea id="dedication" name="dedication" placeholder="In honor of / In memory of"></textarea>
+          </div>
+
+          <!-- Anonymous Donation -->
+          <div class="form-group consent-checkbox">
+            <label>
+              <input type="checkbox" name="anonymous">
+              Make this an anonymous donation
+            </label>
+          </div>
+
+          <!-- Comments -->
+          <div class="form-group">
+            <label for="comments">Comments or Special Instructions (Optional)</label>
+            <textarea id="comments" name="comments"></textarea>
+          </div>
+
+          <!-- Newsletter Subscription -->
+          <div class="form-group consent-checkbox">
+            <label>
+              <input type="checkbox" name="newsletter" checked>
+              Subscribe to our newsletter for impact updates
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-primary btn-large">Proceed to Payment</button>
+
+        </form>
+
+        <p class="form-note">
+          After submitting, you will be redirected to a secure payment page. You will receive a tax receipt via email upon completion of your donation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Ways to Give -->
+  <section class="section other-ways">
+    <div class="container">
+      <h2 class="section-title">Other Ways to Give</h2>
+      <div class="ways-grid">
+        <div class="way-item">
+          <h3>Corporate Matching</h3>
+          <p>Many employers match charitable donations. Check if your company has a matching gift program to double your impact.</p>
+        </div>
+        <div class="way-item">
+          <h3>Stock Donations</h3>
+          <p>Donate appreciated securities and avoid capital gains tax while receiving a full fair-market value deduction.</p>
+        </div>
+        <div class="way-item">
+          <h3>Legacy Giving</h3>
+          <p>Include Change Will Happen in your will or estate plan to create a lasting impact for future generations.</p>
+        </div>
+      </div>
+      <p class="contact-info-text">For more information about these options, please contact us at <a href="mailto:info@changewillhappen.org">info@changewillhappen.org</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Contact Section -->
+        <div id="contact" class="footer-section">
+          <h3>Contact Us</h3>
+          <div class="contact-placeholder">
+            <p>Get in touch with us for inquiries, partnerships, or volunteering opportunities.</p>
+            <p class="contact-info">Email: info@changewillhappen.org</p>
+            <p class="contact-info">Phone: Coming soon</p>
+          </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <div id="newsletter" class="footer-section">
+          <h3>Newsletter</h3>
+          <div class="newsletter-placeholder">
+            <p>Subscribe to our newsletter for updates on our missions and impact.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Donate Section -->
+        <div id="donate" class="footer-section">
+          <h3>Support Our Mission</h3>
+          <p>Your donation helps us continue providing essential care to underserved communities.</p>
+          <a href="donate.html" class="btn btn-donate-large">Donate Now</a>
+          <p class="tax-note">Change Will Happen is a 501(c)(3) non-profit organization. All donations are tax-deductible.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-brand">
+          <img src="images/shared/logo.png" alt="Change Will Happen" class="footer-logo">
+          <p>Making the world a healthier place one step at a time</p>
+        </div>
+        <div class="footer-links">
+          <a href="index.html#about">About</a>
+          <a href="index.html#projects">Projects</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2024 Change Will Happen. All rights reserved.</p>
+          <p class="credits">Proudly created by Arihunt & Avni Garg</p>
+          <p>501(c)(3) Non-profit Organization</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Show/hide custom amount input
+    document.querySelectorAll('input[name="donationAmount"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const customInput = document.getElementById('customAmountInput');
+        if (this.value === 'custom') {
+          customInput.style.display = 'block';
+          document.getElementById('customAmount').required = true;
+        } else {
+          customInput.style.display = 'none';
+          document.getElementById('customAmount').required = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

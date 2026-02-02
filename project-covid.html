@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COVID Relief | Change Will Happen</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo">
+          <img src="images/shared/logo.png" alt="Change Will Happen Logo" />
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-dropdown">
+            <a href="index.html#about" class="dropdown-toggle">
+              About
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="sponsors.html">Our Sponsors</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="index.html#projects" class="dropdown-toggle">
+              Projects
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="project-covid.html">COVID Relief</a></li>
+              <li><a href="project-battery.html">The Battery Project</a></li>
+              <li>
+                <a href="project-philippines.html"
+                  >Medical Mission to Philippines</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#newsletter">Newsletter</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="donate.html" class="btn-donate">Donate</a></li>
+          <li>
+            <a href="volunteer.html" class="btn-volunteer">Get Involved</a>
+          </li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+      <div class="project-hero-overlay">
+        <div class="container">
+          <div class="project-hero-content">
+            <p class="project-category">COVID-19 Response</p>
+            <h1>COVID Relief</h1>
+            <p class="project-date">May 2020 - Ongoing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section project-overview" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="project-content" style="max-width: 100%;">
+          <div class="project-intro">
+            <p>
+              In 2020, Change Will Happen launched a COVID-19 response to
+              support healthcare workers and communities during a time of severe
+              PPE shortages and strained hospital resources. Through two
+              connected efforts, we produced and delivered thousands of pieces
+              of protective equipment and also uplifted frontline staff with
+              handmade thank-you cards, letters, and drawings. The project
+              helped protect doctors, nurses, technicians, and community
+              members, reduced barriers for outpatient offices to stay open
+              safely, and reminded healthcare workers that their sacrifices were
+              seen, valued, and supported.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section project-initiatives">
+      <div class="container">
+        <h2 class="section-title">Our Response</h2>
+
+        <div class="initiative-item">
+          <div class="initiative-content">
+            <div class="initiative-text">
+              <h3>Project 1: Fortifying Our Frontliners</h3>
+              <p>
+                We created and distributed PPE for healthcare workers and
+                community members, including N95-grade style masks made from
+                Halyard material, plus gowns, face shields, surgical caps, and
+                shoe covers. Our work included both producing items ourselves
+                and coordinating donations and purchases through community
+                supporters and microgrants.
+              </p>
+              <p>
+                We organized volunteers and partners to source materials, cut
+                and stitch masks and gowns, assemble PPE kits, and deliver
+                supplies to hospitals, clinics, nursing homes, places of
+                worship, local businesses, and community members.
+              </p>
+            </div>
+            <div class="initiative-image">
+              <div class="project-carousel" id="carousel-part1">
+                <div class="carousel-container">
+                  <img
+                    src="images/covid_project/part1-1.jpg"
+                    alt="PPE Production"
+                    class="carousel-img"
+                  />
+                  <img
+                    src="images/covid_project/part1-2.jpg"
+                    alt="Mask Making"
+                    class="carousel-img"
+                  />
+                  <img
+                    src="images/covid_project/part1-3.jpg"
+                    alt="Distribution"
+                    class="carousel-img"
+                  />
+                </div>
+                <button
+                  class="carousel-btn carousel-prev"
+                  onclick="rotateCarousel('carousel-part1', -1)"
+                >
+                  ❮
+                </button>
+                <button
+                  class="carousel-btn carousel-next"
+                  onclick="rotateCarousel('carousel-part1', 1)"
+                >
+                  ❯
+                </button>
+                <div class="carousel-indicators">
+                  <span
+                    class="indicator active"
+                    onclick="goToSlide('carousel-part1', 0)"
+                  ></span>
+                  <span
+                    class="indicator"
+                    onclick="goToSlide('carousel-part1', 1)"
+                  ></span>
+                  <span
+                    class="indicator"
+                    onclick="goToSlide('carousel-part1', 2)"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="initiative-item reverse">
+          <div class="initiative-content">
+            <div class="initiative-text">
+              <h3>Project 2: Thanking Healthcare Workers</h3>
+              <p>
+                We collected handmade thank-you cards, poems, drawings, and
+                letters from children and families and delivered them to
+                doctors, nurses, technicians, and other staff. We provided clear
+                guidelines to keep messages positive and to protect privacy.
+              </p>
+              <p>
+                We also accepted emailed messages when mailing was not possible,
+                printed them when we could, and included them in weekly
+                deliveries to boost morale and remind healthcare workers that
+                their sacrifices were seen, valued, and supported.
+              </p>
+            </div>
+            <div class="initiative-image">
+              <div class="project-carousel" id="carousel-part2">
+                <div class="carousel-container">
+                  <img
+                    src="images/covid_project/part2-1.jpg"
+                    alt="Thank You Cards"
+                    class="carousel-img"
+                  />
+                  <img
+                    src="images/covid_project/part2-2.jpg"
+                    alt="Card Distribution"
+                    class="carousel-img"
+                  />
+                </div>
+                <button
+                  class="carousel-btn carousel-prev"
+                  onclick="rotateCarousel('carousel-part2', -1)"
+                >
+                  ❮
+                </button>
+                <button
+                  class="carousel-btn carousel-next"
+                  onclick="rotateCarousel('carousel-part2', 1)"
+                >
+                  ❯
+                </button>
+                <div class="carousel-indicators">
+                  <span
+                    class="indicator active"
+                    onclick="goToSlide('carousel-part2', 0)"
+                  ></span>
+                  <span
+                    class="indicator"
+                    onclick="goToSlide('carousel-part2', 1)"
+                  ></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section project-impact" style="padding: 1.5rem 0;">
+      <div class="container">
+        <h2 class="section-title">Impact & Results</h2>
+
+        <div class="impact-stats" style="margin-bottom: 0;">
+          <div class="stat-card">
+            <div class="stat-number">4,500</div>
+            <div class="stat-label">N95-Grade Masks Produced</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">300</div>
+            <div class="stat-label">Handmade Cards Delivered</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section project-partners">
+      <div class="container">
+        <h2 class="section-title">Partners & Supporters</h2>
+        <div class="partners-content">
+          <p>
+            This effort was powered by volunteers and supported by community
+            microgrants and partners. We are grateful to:
+          </p>
+          <div class="partners-list">
+            <div class="partner-item">
+              <h4>Karma For Cara</h4>
+              <p>Microgrant support</p>
+            </div>
+            <div class="partner-item">
+              <h4>Coventure 19</h4>
+              <p>Microgrant support</p>
+            </div>
+            <div class="partner-item">
+              <h4>DPM Foundation</h4>
+              <p>Funded materials for 18,000 masks</p>
+            </div>
+            <div class="partner-item">
+              <h4>Bentley Labs</h4>
+              <p>Donated 60 bottles of hand sanitizer</p>
+            </div>
+            <div class="partner-item">
+              <h4>ASUSA</h4>
+              <p>Dinner for 300 healthcare workers</p>
+            </div>
+          </div>
+
+          <div class="volunteer-team">
+            <h4>Our Volunteer Team</h4>
+            <p>
+              Special thanks to our superhero team: Mercedes, Albina, Rose,
+              Cynthia, Josie, Asia, Arihunt, Nancy Gonzales, Debbie Bernard,
+              Nikita & Harsh Agarwal, Thamodi Rajapakse, and all community
+              volunteers who made this possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section project-cta">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Support Our Mission</h2>
+          <p>
+            Your support helps us continue providing essential care and
+            resources to underserved communities.
+          </p>
+          <div class="cta-buttons">
+            <a href="volunteer.html" class="btn-volunteer-cta"
+              >Volunteer With Us</a
+            >
+            <a href="donate.html" class="btn btn-donate-large"
+              >Donate Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Contact Section -->
+          <div id="contact" class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-placeholder">
+              <p>
+                Get in touch with us for inquiries, partnerships, or
+                volunteering opportunities.
+              </p>
+              <p class="contact-info">Email: info@changewillhappen.org</p>
+              <p class="contact-info">Phone: Coming soon</p>
+            </div>
+          </div>
+
+          <!-- Newsletter Section -->
+          <div id="newsletter" class="footer-section">
+            <h3>Newsletter</h3>
+            <div class="newsletter-placeholder">
+              <p>
+                Subscribe to our newsletter for updates on our missions and
+                impact.
+              </p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Donate Section -->
+          <div id="donate" class="footer-section">
+            <h3>Support Our Mission</h3>
+            <p>
+              Your donation helps us continue providing essential care to
+              underserved communities.
+            </p>
+            <a href="donate.html" class="btn btn-donate-large">Donate Now</a>
+            <p class="tax-note">
+              Change Will Happen is a 501(c)(3) non-profit organization. All
+              donations are tax-deductible.
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-brand">
+            <img
+              src="images/shared/logo.png"
+              alt="Change Will Happen"
+              class="footer-logo"
+            />
+            <p>Making the world a healthier place one step at a time</p>
+          </div>
+          <div class="footer-links">
+            <a href="index.html#about">About</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+          </div>
+          <div class="footer-copyright">
+            <p>&copy; 2024 Change Will Happen. All rights reserved.</p>
+            <p class="credits">Proudly created by Arihunt & Avni Garg</p>
+            <p>501(c)(3) Non-profit Organization</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function rotateCarousel(carouselId, direction) {
+        const carousel = document.getElementById(carouselId);
+        const images = carousel.querySelectorAll(".carousel-img");
+        const indicators = carousel.querySelectorAll(".indicator");
+
+        // Find current active image
+        let currentIndex = 0;
+        images.forEach((img, index) => {
+          if (img.classList.contains("active")) {
+            currentIndex = index;
+          }
+        });
+
+        // Remove active class
+        images[currentIndex].classList.remove("active");
+        indicators[currentIndex].classList.remove("active");
+
+        // Calculate new index
+        currentIndex =
+          (currentIndex + direction + images.length) % images.length;
+
+        // Add active class to new image
+        images[currentIndex].classList.add("active");
+        indicators[currentIndex].classList.add("active");
+      }
+
+      function goToSlide(carouselId, slideIndex) {
+        const carousel = document.getElementById(carouselId);
+        const images = carousel.querySelectorAll(".carousel-img");
+        const indicators = carousel.querySelectorAll(".indicator");
+
+        // Remove active class from all
+        images.forEach((img) => img.classList.remove("active"));
+        indicators.forEach((indicator) => indicator.classList.remove("active"));
+
+        // Add active class to selected
+        images[slideIndex].classList.add("active");
+        indicators[slideIndex].classList.add("active");
+      }
+
+      // Initialize carousels - set first image as active and start auto-rotation
+      document.addEventListener("DOMContentLoaded", function () {
+        const carousels = document.querySelectorAll(".project-carousel");
+        carousels.forEach((carousel) => {
+          const carouselId = carousel.id;
+          const firstImage = carousel.querySelector(".carousel-img");
+          const firstIndicator = carousel.querySelector(".indicator");
+          if (firstImage) firstImage.classList.add("active");
+          if (firstIndicator) firstIndicator.classList.add("active");
+
+          // Auto-rotate carousel every 5 seconds
+          setInterval(() => {
+            rotateCarousel(carouselId, 1);
+          }, 5000);
+        });
+      });
+    </script>
+  </body>
+</html>
