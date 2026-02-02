@@ -81,22 +81,23 @@
 /* Grant Items */
 .grant-item {
   background-color: var(--white);
-  padding: var(--spacing-md);
+  padding: var(--spacing-xs) 0.5rem;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100px;
+  min-height: 60px;
 }
 
 .grant-item:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .grant-item h3 {
   color: var(--primary-green);
+  font-family: "Lato", Arial, sans-serif;
   font-size: 0.95rem;
   font-weight: 600;
   margin: 0;
@@ -134,23 +135,23 @@
 
 .sponsor-card {
   background-color: var(--white);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-xs);
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: var(--transition);
   font-weight: 500;
   color: var(--dark-text);
   font-size: 0.9rem;
   line-height: 1.5;
-  min-height: 70px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .sponsor-card:hover {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15), 0 0 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
 }
 
