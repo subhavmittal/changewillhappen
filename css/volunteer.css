@@ -100,7 +100,7 @@
 }
 
 .form-group label {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   color: rgb(51, 51, 51);
   font-size: 0.95rem;
@@ -116,7 +116,7 @@
 .volunteer-form select,
 .volunteer-form textarea {
   padding: 0.875rem 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 6px;
@@ -140,7 +140,7 @@
 .volunteer-form textarea {
   resize: vertical;
   min-height: 100px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .volunteer-form .btn {
@@ -292,7 +292,7 @@
 
 .iti__input {
   padding: 0.875rem 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1rem;
   border: 1px solid var(--border-color);
   border-radius: 6px;
