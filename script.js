@@ -195,3 +195,81 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// International Telephone Input Initialization
+const phoneInput = document.querySelector("#phone");
+
+if (phoneInput && window.intlTelInput) {
+    const iti = window.intlTelInput(phoneInput, {
+        initialCountry: "auto",
+        geoIpLookup: function(callback) {
+            // Using ipapi for geolocation
+            fetch('https://ipapi.co/json/')
+                .then(res => res.json())
+                .catch(() => {
+                    // Fallback to US if geolocation fails
+                    callback('us');
+                })
+                .then(data => callback(data.country_code ? data.country_code.toLowerCase() : 'us'))
+                .catch(() => callback('us'));
+        },
+        preferredCountries: ["us", "ca", "gb", "au", "in"],
+        separateDialCode: true,
+        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/utils.min.js"
+    });
+
+    // Update hidden fields on input
+    phoneInput.addEventListener('change', () => {
+        const phoneCountryField = document.querySelector("#phoneCountry");
+        const phoneNumberOnlyField = document.querySelector("#phoneNumberOnly");
+
+        if (phoneCountryField && phoneNumberOnlyField) {
+            phoneCountryField.value = iti.getSelectedCountryData().dialCode;
+            phoneNumberOnlyField.value = iti.getNumber();
+        }
+    });
+
+    phoneInput.addEventListener('input', () => {
+        const phoneCountryField = document.querySelector("#phoneCountry");
+        const phoneNumberOnlyField = document.querySelector("#phoneNumberOnly");
+
+        if (phoneCountryField && phoneNumberOnlyField) {
+            phoneCountryField.value = iti.getSelectedCountryData().dialCode;
+            phoneNumberOnlyField.value = iti.getNumber();
+        }
+    });
+
+    // Handle form submission
+    const volunteerForm = document.querySelector('.volunteer-form');
+    if (volunteerForm) {
+        volunteerForm.addEventListener('submit', function(e) {
+            // Validate phone number
+            if (phoneInput.value.trim()) {
+                if (!iti.isValidNumber()) {
+                    e.preventDefault();
+                    phoneInput.classList.add('iti__error');
+                    // Show error message or alert
+                    const errorMsg = document.createElement('div');
+                    errorMsg.style.color = 'var(--accent-red)';
+                    errorMsg.style.fontSize = '0.875rem';
+                    errorMsg.style.marginTop = '0.25rem';
+                    errorMsg.textContent = 'Please enter a valid phone number';
+
+                    const wrapper = phoneInput.parentElement;
+                    const existingError = wrapper.querySelector('[role="alert"]');
+                    if (existingError) existingError.remove();
+
+                    errorMsg.setAttribute('role', 'alert');
+                    wrapper.appendChild(errorMsg);
+
+                    return false;
+                } else {
+                    phoneInput.classList.remove('iti__error');
+                    const wrapper = phoneInput.parentElement;
+                    const existingError = wrapper.querySelector('[role="alert"]');
+                    if (existingError) existingError.remove();
+                }
+            }
+        });
+    }
+}
