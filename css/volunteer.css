@@ -102,7 +102,7 @@
 .form-group label {
   font-family: "Lato", sans-serif;
   font-weight: 600;
-  color: rgb(51, 51, 51);
+  color: var(--dark-text);
   font-size: 0.95rem;
   text-align: left;
 }
@@ -189,7 +189,7 @@
 .checkbox-item label {
   cursor: pointer;
   font-weight: 400;
-  color: rgb(51, 51, 51);
+  color: var(--dark-text);
   margin: 0;
   font-size: 0.95rem;
 }
@@ -223,7 +223,7 @@
   font-weight: 400;
   font-size: 0.95rem;
   cursor: pointer;
-  color: rgb(51, 51, 51);
+  color: var(--dark-text);
 }
 
 /* Phone Input Styling */

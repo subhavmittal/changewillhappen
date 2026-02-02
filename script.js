@@ -1,193 +1,199 @@
 // Mobile Menu Toggle
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
 if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        mobileMenuToggle.classList.toggle('active');
-    });
+  mobileMenuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    mobileMenuToggle.classList.toggle("active");
+  });
 }
 
 // Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
-    });
+document.querySelectorAll(".nav-menu a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    mobileMenuToggle.classList.remove("active");
+  });
 });
 
 // Hero Carousel Functionality
-const carouselSlides = document.querySelectorAll('.carousel-slide');
-const carouselDots = document.querySelectorAll('.carousel-dots .dot');
-const prevCarouselBtn = document.querySelector('.carousel-prev');
-const nextCarouselBtn = document.querySelector('.carousel-next');
+const carouselSlides = document.querySelectorAll(".carousel-slide");
+const carouselDots = document.querySelectorAll(".carousel-dots .dot");
+const prevCarouselBtn = document.querySelector(".carousel-prev");
+const nextCarouselBtn = document.querySelector(".carousel-next");
 
 let currentSlide = 0;
 let carouselInterval;
 const slideInterval = 5000; // 5 seconds
 
 function showSlide(index) {
-    // Handle wraparound
-    if (index >= carouselSlides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = carouselSlides.length - 1;
-    } else {
-        currentSlide = index;
-    }
+  // Handle wraparound
+  if (index >= carouselSlides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = carouselSlides.length - 1;
+  } else {
+    currentSlide = index;
+  }
 
-    // Update slides
-    carouselSlides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === currentSlide);
-    });
+  // Update slides
+  carouselSlides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === currentSlide);
+  });
 
-    // Update dots
-    carouselDots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentSlide);
-    });
+  // Update dots
+  carouselDots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentSlide);
+  });
 }
 
 function nextSlide() {
-    showSlide(currentSlide + 1);
+  showSlide(currentSlide + 1);
 }
 
 function prevSlide() {
-    showSlide(currentSlide - 1);
+  showSlide(currentSlide - 1);
 }
 
 function startCarousel() {
-    carouselInterval = setInterval(nextSlide, slideInterval);
+  clearInterval(carouselInterval);
+  carouselInterval = setInterval(nextSlide, slideInterval);
 }
 
 function stopCarousel() {
-    clearInterval(carouselInterval);
+  clearInterval(carouselInterval);
 }
 
 function resetCarousel() {
-    stopCarousel();
-    startCarousel();
+  stopCarousel();
+  startCarousel();
 }
 
 // Initialize carousel if elements exist
 if (carouselSlides.length > 0) {
-    // Start auto-play
-    startCarousel();
+  // Start auto-play
+  startCarousel();
 
-    // Navigation buttons
-    if (prevCarouselBtn) {
-        prevCarouselBtn.addEventListener('click', () => {
-            prevSlide();
-            resetCarousel();
-        });
-    }
-
-    if (nextCarouselBtn) {
-        nextCarouselBtn.addEventListener('click', () => {
-            nextSlide();
-            resetCarousel();
-        });
-    }
-
-    // Dot navigation
-    carouselDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showSlide(index);
-            resetCarousel();
-        });
+  // Navigation buttons
+  if (prevCarouselBtn) {
+    prevCarouselBtn.addEventListener("click", () => {
+      prevSlide();
+      resetCarousel();
     });
+  }
 
-    // Pause on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', stopCarousel);
-        carouselContainer.addEventListener('mouseleave', startCarousel);
-    }
-
-    // Keyboard navigation for carousel
-    document.addEventListener('keydown', (e) => {
-        if (document.querySelector('.lightbox.active')) return; // Don't interfere with lightbox
-
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-            resetCarousel();
-        }
-        if (e.key === 'ArrowRight') {
-            nextSlide();
-            resetCarousel();
-        }
+  if (nextCarouselBtn) {
+    nextCarouselBtn.addEventListener("click", () => {
+      nextSlide();
+      resetCarousel();
     });
+  }
+
+  // Dot navigation
+  carouselDots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      resetCarousel();
+    });
+  });
+
+  // Pause on hover
+  const carouselContainer = document.querySelector(".carousel-container");
+  if (carouselContainer) {
+    carouselContainer.addEventListener("mouseenter", stopCarousel);
+    carouselContainer.addEventListener("mouseleave", startCarousel);
+  }
+
+  // Keyboard navigation for carousel
+  document.addEventListener("keydown", (e) => {
+    if (document.querySelector(".lightbox.active")) return; // Don't interfere with lightbox
+
+    if (e.key === "ArrowLeft") {
+      prevSlide();
+      resetCarousel();
+    }
+    if (e.key === "ArrowRight") {
+      nextSlide();
+      resetCarousel();
+    }
+  });
 }
 
-
 // Newsletter Form
-const newsletterForm = document.querySelector('.newsletter-form');
+const newsletterForm = document.querySelector(".newsletter-form");
 if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const email = newsletterForm.querySelector('input[type="email"]').value;
-        alert(`Thank you for subscribing with ${email}! You'll receive our updates soon.`);
-        newsletterForm.reset();
-    });
+  newsletterForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = newsletterForm.querySelector('input[type="email"]').value;
+    alert(
+      `Thank you for subscribing with ${email}! You'll receive our updates soon.`,
+    );
+    newsletterForm.reset();
+  });
 }
 
 // Smooth scroll for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href === '#') return;
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (href === "#") return;
 
-        const target = document.querySelector(href);
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  });
 });
 
 // Navbar scroll effect
-const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector(".navbar");
 let lastScroll = 0;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
 
-    if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.boxShadow = 'none';
-    }
+  if (currentScroll > 100) {
+    navbar.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+  } else {
+    navbar.style.boxShadow = "none";
+  }
 
-    lastScroll = currentScroll;
+  lastScroll = currentScroll;
 });
 
 // Intersection Observer for scroll animations
 const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px",
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.impact-item, .gallery-item, .project-card, .footer-section').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+document
+  .querySelectorAll(
+    ".impact-item, .gallery-item, .project-card, .footer-section",
+  )
+  .forEach((el) => {
+    el.style.opacity = "0";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     observer.observe(el);
-});
+  });
 
 // Add visible state styles
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.textContent = `
     .visible {
         opacity: 1 !important;
@@ -200,76 +206,79 @@ document.head.appendChild(style);
 const phoneInput = document.querySelector("#phone");
 
 if (phoneInput && window.intlTelInput) {
-    const iti = window.intlTelInput(phoneInput, {
-        initialCountry: "auto",
-        geoIpLookup: function(callback) {
-            // Using ipapi for geolocation
-            fetch('https://ipapi.co/json/')
-                .then(res => res.json())
-                .catch(() => {
-                    // Fallback to US if geolocation fails
-                    callback('us');
-                })
-                .then(data => callback(data.country_code ? data.country_code.toLowerCase() : 'us'))
-                .catch(() => callback('us'));
-        },
-        preferredCountries: ["us", "ca", "gb", "au", "in"],
-        separateDialCode: true,
-        utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/utils.min.js"
-    });
+  const iti = window.intlTelInput(phoneInput, {
+    initialCountry: "auto",
+    geoIpLookup: function (callback) {
+      // Using ipapi for geolocation
+      fetch("https://ipapi.co/json/")
+        .then((res) => res.json())
+        .catch(() => {
+          // Fallback to US if geolocation fails
+          callback("us");
+        })
+        .then((data) =>
+          callback(data.country_code ? data.country_code.toLowerCase() : "us"),
+        )
+        .catch(() => callback("us"));
+    },
+    preferredCountries: ["us", "ca", "gb", "au", "in"],
+    separateDialCode: true,
+    utilsScript:
+      "https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/utils.min.js",
+  });
 
-    // Update hidden fields on input
-    phoneInput.addEventListener('change', () => {
-        const phoneCountryField = document.querySelector("#phoneCountry");
-        const phoneNumberOnlyField = document.querySelector("#phoneNumberOnly");
+  // Update hidden fields on input
+  phoneInput.addEventListener("change", () => {
+    const phoneCountryField = document.querySelector("#phoneCountry");
+    const phoneNumberOnlyField = document.querySelector("#phoneNumberOnly");
 
-        if (phoneCountryField && phoneNumberOnlyField) {
-            phoneCountryField.value = iti.getSelectedCountryData().dialCode;
-            phoneNumberOnlyField.value = iti.getNumber();
-        }
-    });
-
-    phoneInput.addEventListener('input', () => {
-        const phoneCountryField = document.querySelector("#phoneCountry");
-        const phoneNumberOnlyField = document.querySelector("#phoneNumberOnly");
-
-        if (phoneCountryField && phoneNumberOnlyField) {
-            phoneCountryField.value = iti.getSelectedCountryData().dialCode;
-            phoneNumberOnlyField.value = iti.getNumber();
-        }
-    });
-
-    // Handle form submission
-    const volunteerForm = document.querySelector('.volunteer-form');
-    if (volunteerForm) {
-        volunteerForm.addEventListener('submit', function(e) {
-            // Validate phone number
-            if (phoneInput.value.trim()) {
-                if (!iti.isValidNumber()) {
-                    e.preventDefault();
-                    phoneInput.classList.add('iti__error');
-                    // Show error message or alert
-                    const errorMsg = document.createElement('div');
-                    errorMsg.style.color = 'var(--accent-red)';
-                    errorMsg.style.fontSize = '0.875rem';
-                    errorMsg.style.marginTop = '0.25rem';
-                    errorMsg.textContent = 'Please enter a valid phone number';
-
-                    const wrapper = phoneInput.parentElement;
-                    const existingError = wrapper.querySelector('[role="alert"]');
-                    if (existingError) existingError.remove();
-
-                    errorMsg.setAttribute('role', 'alert');
-                    wrapper.appendChild(errorMsg);
-
-                    return false;
-                } else {
-                    phoneInput.classList.remove('iti__error');
-                    const wrapper = phoneInput.parentElement;
-                    const existingError = wrapper.querySelector('[role="alert"]');
-                    if (existingError) existingError.remove();
-                }
-            }
-        });
+    if (phoneCountryField && phoneNumberOnlyField) {
+      phoneCountryField.value = iti.getSelectedCountryData().dialCode;
+      phoneNumberOnlyField.value = iti.getNumber();
     }
+  });
+
+  phoneInput.addEventListener("input", () => {
+    const phoneCountryField = document.querySelector("#phoneCountry");
+    const phoneNumberOnlyField = document.querySelector("#phoneNumberOnly");
+
+    if (phoneCountryField && phoneNumberOnlyField) {
+      phoneCountryField.value = iti.getSelectedCountryData().dialCode;
+      phoneNumberOnlyField.value = iti.getNumber();
+    }
+  });
+
+  // Handle form submission
+  const volunteerForm = document.querySelector(".volunteer-form");
+  if (volunteerForm) {
+    volunteerForm.addEventListener("submit", function (e) {
+      // Validate phone number
+      if (phoneInput.value.trim()) {
+        if (!iti.isValidNumber()) {
+          e.preventDefault();
+          phoneInput.classList.add("iti__error");
+          // Show error message or alert
+          const errorMsg = document.createElement("div");
+          errorMsg.style.color = "var(--accent-red)";
+          errorMsg.style.fontSize = "0.875rem";
+          errorMsg.style.marginTop = "0.25rem";
+          errorMsg.textContent = "Please enter a valid phone number";
+
+          const wrapper = phoneInput.parentElement;
+          const existingError = wrapper.querySelector('[role="alert"]');
+          if (existingError) existingError.remove();
+
+          errorMsg.setAttribute("role", "alert");
+          wrapper.appendChild(errorMsg);
+
+          return false;
+        } else {
+          phoneInput.classList.remove("iti__error");
+          const wrapper = phoneInput.parentElement;
+          const existingError = wrapper.querySelector('[role="alert"]');
+          if (existingError) existingError.remove();
+        }
+      }
+    });
+  }
 }
