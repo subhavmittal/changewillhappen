@@ -171,8 +171,9 @@
 
 /* Impact Section */
 .impact-section {
-  background-color: var(--new-color);
+  background: linear-gradient(180deg, #ccaf8e 0%, #c4a685 100%);
   padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
 }
 
 .impact-heading {
@@ -183,47 +184,48 @@
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .impact-item {
   text-align: center;
   padding: var(--spacing-md);
-  background: var(--new-cardcolor);
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--white) 0%, #e8f5e9 100%);
+  border-radius: 10px;
   transition: var(--transition);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
 }
 
 .impact-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.impact-icon {
-  width: 64px;
-  height: 64px;
-  background: var(--primary-green);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--spacing-sm);
-  color: var(--white);
+.impact-icon-small {
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-green);
 }
 
-.impact-item h3 {
+.impact-number {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
   color: var(--primary-green);
   margin-bottom: var(--spacing-xs);
-  font-size: 1.125rem;
-  font-weight: 700;
+  line-height: 1;
 }
 
 .impact-item p {
   font-size: 0.9375rem;
   color: var(--dark-text);
   margin: 0;
+  font-weight: 500;
 }
 
 /* Projects Section */
@@ -467,7 +469,15 @@
   }
 
   .impact-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 700px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
   }
 }
 
@@ -492,10 +502,6 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
     padding: 0;
-  }
-
-  .impact-grid {
-    grid-template-columns: 1fr;
   }
 
   .action-cards-grid {
