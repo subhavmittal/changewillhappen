@@ -196,7 +196,7 @@
   background: linear-gradient(135deg, var(--white) 0%, #e8f5e9 100%);
   border-radius: 10px;
   transition: var(--transition);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(76, 175, 80, 0.2);
   text-decoration: none;
   display: block;
   cursor: pointer;
@@ -204,7 +204,7 @@
 
 .impact-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--primary-green);
 }
 
 .impact-icon-small {

@@ -238,13 +238,61 @@ if (phoneInput && window.intlTelInput) {
     }
   });
 
-  phoneInput.addEventListener("input", () => {
+  phoneInput.addEventListener("input", (e) => {
     const phoneCountryField = document.querySelector("#phoneCountry");
     const phoneNumberOnlyField = document.querySelector("#phoneNumberOnly");
 
     if (phoneCountryField && phoneNumberOnlyField) {
       phoneCountryField.value = iti.getSelectedCountryData().dialCode;
       phoneNumberOnlyField.value = iti.getNumber();
+    }
+  });
+
+  // Country-specific max phone number lengths
+  const countryMaxDigits = {
+    us: 10, ca: 10, gb: 10, au: 9, in: 10, de: 11, fr: 9, it: 10, es: 9,
+    br: 11, mx: 10, jp: 10, cn: 11, kr: 10, ru: 10, za: 9, ng: 10, ke: 9,
+    ph: 10, pk: 10, bd: 10, id: 12, vn: 9, th: 9, my: 9, sg: 8, hk: 8,
+    ae: 9, sa: 9, eg: 10, tr: 10, pl: 9, nl: 9, be: 9, se: 9, no: 8,
+    dk: 8, fi: 10, at: 10, ch: 9, pt: 9, gr: 10, ie: 9, nz: 9, il: 9
+  };
+
+  function getMaxDigits() {
+    const countryData = iti.getSelectedCountryData();
+    const countryCode = countryData.iso2;
+    return countryMaxDigits[countryCode] || 15;
+  }
+
+  // Use beforeinput event - fires BEFORE the input changes and can be cancelled
+  phoneInput.addEventListener("beforeinput", (e) => {
+    // Allow deletions
+    if (e.inputType === 'deleteContentBackward' || e.inputType === 'deleteContentForward' ||
+        e.inputType === 'deleteByCut' || e.inputType === 'deleteByDrag') {
+      return;
+    }
+
+    // Get the data being inserted
+    const insertedData = e.data || '';
+
+    // Block any non-numeric input
+    if (insertedData && !/^\d+$/.test(insertedData)) {
+      e.preventDefault();
+      return;
+    }
+
+    // Check if we're at max digits
+    const currentDigits = phoneInput.value.replace(/\D/g, '').length;
+    const maxDigits = getMaxDigits();
+    const selectionStart = phoneInput.selectionStart;
+    const selectionEnd = phoneInput.selectionEnd;
+    const selectedDigits = phoneInput.value.substring(selectionStart, selectionEnd).replace(/\D/g, '').length;
+
+    // Calculate digits after this input
+    const newDigitsCount = insertedData.replace(/\D/g, '').length;
+    const resultingDigits = currentDigits - selectedDigits + newDigitsCount;
+
+    if (resultingDigits > maxDigits) {
+      e.preventDefault();
     }
   });
 

@@ -12,7 +12,7 @@
 }
 
 .sponsors-hero-content h1 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.75rem, 4vw, 4rem);
   color: var(--white);
   margin-bottom: var(--spacing-xs);
 }
@@ -67,7 +67,7 @@
 }
 
 .year-header h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -92,7 +92,7 @@
 }
 
 .grant-item:hover {
-  border-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.35);
 }
 
 .grant-item h3 {
@@ -151,8 +151,7 @@
 }
 
 .sponsor-card:hover {
-  border-color: rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, 0.35);
 }
 
 /* CTA Section */

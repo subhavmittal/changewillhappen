@@ -32,13 +32,13 @@
 }
 
 .volunteer-hero-content h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 6vw, 4rem);
   color: var(--white);
   margin-bottom: var(--spacing-sm);
 }
 
 .volunteer-hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--white);
   margin: 0;
 }
@@ -103,7 +103,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 600;
   color: var(--dark-text);
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-align: left;
 }
 
