@@ -36,7 +36,7 @@
 }
 
 .intro-content p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.7;
   color: var(--medium-text);
   margin: 0;
@@ -98,7 +98,7 @@
 .grant-item h3 {
   color: var(--primary-green);
   font-family: "Lato", Arial, sans-serif;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 600;
   margin: 0;
   line-height: 1.6;
@@ -110,7 +110,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -121,7 +121,7 @@
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 /* Sponsors Grid */
@@ -142,7 +142,7 @@
   transition: var(--transition);
   font-weight: 500;
   color: var(--dark-text);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   min-height: 60px;
   display: flex;
@@ -169,7 +169,7 @@
 }
 
 .sponsors-cta .cta-content p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--medium-text);
   margin-bottom: var(--spacing-md);
   max-width: 700px;
@@ -184,12 +184,17 @@
   flex-wrap: wrap;
 }
 
+.cta-buttons .btn {
+  font-size: 1.05rem;
+}
+
 .btn-secondary {
-  background-color: var(--white);
-  color: var(--primary-green);
+  background-color: var(--primary-green);
+  color: var(--white);
   padding: 0.875rem 1.75rem;
   border-radius: 6px;
   font-weight: 600;
+  font-size: 1.05rem;
   text-decoration: none;
   display: inline-block;
   transition: var(--transition);
@@ -197,7 +202,7 @@
 }
 
 .btn-secondary:hover {
-  background-color: var(--primary-green);
+  background-color: var(--primary-green-dark);
   color: var(--white);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(45, 90, 61, 0.3);

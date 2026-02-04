@@ -127,14 +127,14 @@
 
 .footer-section h3 {
   font-family: "Merriweather", Georgia, serif;
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   color: var(--white);
   margin-bottom: var(--spacing-sm);
 }
 
 .footer-section p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   line-height: 1.6;
 }
 
@@ -162,7 +162,7 @@
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.1);
   color: var(--white);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .newsletter-form input::placeholder {
@@ -200,7 +200,7 @@
 
 .footer-brand p {
   color: rgba(255, 255, 255, 0.6);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin: 0;
 }
 
@@ -226,18 +226,18 @@
 
 .footer-copyright p {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   margin-bottom: 4px;
 }
 
 .footer-copyright .credits {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .footer-about-link {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   transition: var(--transition-fast);
 }
 

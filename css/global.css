@@ -149,7 +149,7 @@ p {
 .btn-primary {
   background-color: var(--primary-green);
   color: var(--white);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .btn-primary:hover {
@@ -201,7 +201,7 @@ p {
   color: var(--white);
   padding: 0.75rem 1.25rem;
   border-radius: 6px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   line-height: normal;
   text-decoration: none;
