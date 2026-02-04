@@ -115,7 +115,7 @@ p {
 
 .section-label {
   font-family: "Lato", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 600;
   color: var(--primary-green);
   text-transform: uppercase;
@@ -149,6 +149,7 @@ p {
 .btn-primary {
   background-color: var(--primary-green);
   color: var(--white);
+  font-size: 1.1rem;
 }
 
 .btn-primary:hover {
@@ -198,9 +199,11 @@ p {
 .btn-donate-large {
   background-color: var(--accent-red);
   color: var(--white);
-  padding: 0.875rem 1.75rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 6px;
+  font-size: 1.1rem;
   font-weight: 600;
+  line-height: normal;
   text-decoration: none;
   display: inline-block;
   transition: var(--transition);
