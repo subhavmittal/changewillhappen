@@ -28,7 +28,7 @@
 }
 
 .project-category {
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -37,14 +37,14 @@
 }
 
 .project-hero-content h1 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.75rem, 4vw, 4rem);
   color: var(--white);
   margin-bottom: var(--spacing-sm);
 }
 
 .project-date {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .project-intro p {
-  font-size: 1.0625rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--medium-text);
 }
@@ -87,7 +87,7 @@
 }
 
 .context-text p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--medium-text);
   margin-bottom: var(--spacing-md);
@@ -101,13 +101,19 @@
 /* Project Initiatives */
 .project-initiatives {
   background-color: var(--white);
+  margin-top: calc(var(--spacing-lg) * -0.5);
+}
+
+.project-initiatives .section-title {
+  font-size: clamp(2rem, 3.8vw, 2.5rem);
+  margin-bottom: var(--spacing-sm);
 }
 
 .section-title {
   text-align: center;
   color: var(--primary-green);
   margin-bottom: var(--spacing-lg);
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(2rem, 3.8vw, 2.5rem);
 }
 
 .initiative-item {
@@ -136,58 +142,67 @@
 .initiative-text h3 {
   color: var(--accent-red);
   margin-bottom: var(--spacing-md);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 .initiative-text p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--medium-text);
   margin-bottom: var(--spacing-md);
 }
 
+.initiative-text ul li {
+  font-size: 1.05rem;
+  color: var(--medium-text);
+}
+
 /* Project Impact */
 .project-impact {
-  background-color: var(--new-color);
-  padding: var(--spacing-xl) 0;
+  background: linear-gradient(180deg, #ccaf8e 0%, #c4a685 100%);
+  padding: var(--spacing-lg) 0;
 }
 
 .impact-stats {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
-  max-width: 800px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .stat-card {
-  background-color: var(--white);
-  padding: var(--spacing-lg);
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--white) 0%, #e8f5e9 100%);
+  padding: var(--spacing-md);
+  border-radius: 10px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(76, 175, 80, 0.2);
   transition: var(--transition);
+  display: block;
+  cursor: pointer;
 }
 
 .stat-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 2px solid var(--primary-green);
 }
 
 .stat-number {
   font-family: "Merriweather", Georgia, serif;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 600;
   color: var(--primary-green);
   margin-bottom: var(--spacing-xs);
+  line-height: 1;
 }
 
 .stat-label {
-  font-size: 1rem;
-  color: var(--medium-text);
+  font-size: 1.1rem;
+  color: var(--dark-text);
   font-weight: 500;
+  margin: 0;
 }
 
 .support-grid {
@@ -228,6 +243,10 @@
   background-color: var(--white);
 }
 
+.project-partners .section-title {
+  margin-bottom: var(--spacing-sm);
+}
+
 .partners-content {
   max-width: 900px;
   margin: 0 auto;
@@ -235,7 +254,7 @@
 
 .partners-content > p {
   text-align: center;
-  font-size: 1.0625rem;
+  font-size: 1.05rem;
   color: var(--medium-text);
   margin-bottom: var(--spacing-lg);
 }
@@ -256,31 +275,32 @@
 
 .partner-item h4 {
   color: var(--primary-green);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   margin-bottom: var(--spacing-xs);
 }
 
 .partner-item p {
-  font-size: 0.875rem;
+  font-size: 1.05rem;
   color: var(--medium-text);
   margin: 0;
 }
 
 .volunteer-team {
   background-color: var(--light-bg);
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   border-radius: 12px;
   text-align: center;
 }
 
 .volunteer-team h4 {
   color: var(--accent-red);
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  margin-top: 0;
   margin-bottom: var(--spacing-sm);
 }
 
 .volunteer-team p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--medium-text);
   margin: 0;
@@ -324,7 +344,7 @@
 .project-cta {
   background-color: var(--primary-green);
   text-align: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-lg) 0 var(--spacing-xl) 0;
 }
 
 .cta-content h2 {
@@ -334,7 +354,7 @@
 
 .cta-content p {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   margin-bottom: var(--spacing-lg);
 }
 
@@ -348,19 +368,30 @@
 .btn-volunteer-cta {
   background-color: var(--accent-red);
   color: var(--white);
-  padding: 0.875rem 1.75rem;
-  border-radius: 6px;
+  font-size: 1.1rem;
   font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 6px;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition: var(--transition);
-  margin: var(--spacing-sm) 0;
 }
 
 .btn-volunteer-cta:hover {
   background-color: var(--accent-red-dark);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(196, 69, 54, 0.3);
+}
+
+.project-cta .btn-donate-large {
+  font-size: 1.1rem;
+  padding: 0.875rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
 
 /* Image and Video Placeholders */
@@ -423,7 +454,7 @@
 .carousel-container {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -520,7 +551,8 @@
   }
 
   .impact-stats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
   }
 
   .support-grid {
@@ -565,15 +597,18 @@
     grid-template-columns: 1fr;
   }
 
-  .impact-stats {
-    grid-template-columns: 1fr;
-  }
-
   .cta-buttons {
     flex-direction: column;
   }
 
   .cta-buttons .btn {
     width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .impact-stats {
+    grid-template-columns: 1fr;
+    max-width: 350px;
   }
 }

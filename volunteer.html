@@ -1,205 +1,275 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volunteer with Us | Change Will Happen</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/volunteer.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/css/intlTelInput.css">
-</head>
-<body>
-
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <img src="images/shared/logo.png" alt="Change Will Happen Logo">
-      </a>
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li class="nav-dropdown">
-          <a href="index.html#about" class="dropdown-toggle">
-            About
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="sponsors.html">Our Sponsors</a></li>
-          </ul>
-        </li>
-        <li class="nav-dropdown">
-          <a href="index.html#projects" class="dropdown-toggle">
-            Projects
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="project-covid.html">COVID Relief</a></li>
-            <li><a href="project-battery.html">The Battery Project</a></li>
-            <li><a href="project-philippines.html">Medical Mission to Philippines</a></li>
-          </ul>
-        </li>
-        <li><a href="index.html#events">Events</a></li>
-        <li><a href="index.html#newsletter">Newsletter</a></li>
-        <li><a href="index.html#gallery">Gallery</a></li>
-        <li><a href="donate.html" class="btn-donate">Donate</a></li>
-        <li><a href="volunteer.html" class="btn-volunteer">Get Involved</a></li>
-      </ul>
-      <button class="mobile-menu-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="volunteer-hero">
-    <img src="images/home/volunteer.jpg" alt="Volunteer">
-    <div class="volunteer-hero-overlay">
-      <div class="volunteer-hero-content">
-        <h1>Encouraging Change Makers</h1>
-        <p>Join our community of volunteers ready to make a real impact.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer with Us | Change Will Happen</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/volunteer.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/css/intlTelInput.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="nav-logo">
+          <img src="images/shared/logo.png" alt="Change Will Happen Logo" />
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-dropdown">
+            <a href="index.html#about" class="dropdown-toggle">
+              About
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="team.html">Our Team</a></li>
+              <li><a href="sponsors.html">Our Sponsors</a></li>
+            </ul>
+          </li>
+          <li class="nav-dropdown">
+            <a href="index.html#projects" class="dropdown-toggle">
+              Projects
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="project-covid.html">COVID Relief</a></li>
+              <li><a href="project-battery.html">The Battery Project</a></li>
+              <li>
+                <a href="project-philippines.html"
+                  >Medical Mission to Philippines</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="index.html#events">Events</a></li>
+          <li><a href="index.html#newsletter">Newsletter</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="donate.html" class="btn-donate">Donate</a></li>
+          <li>
+            <a href="volunteer.html" class="btn-volunteer">Get Involved</a>
+          </li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Volunteer Form Section -->
-  <section class="section volunteer-section">
-    <div class="container">
-      <div class="volunteer-content">
-        <!-- Heading -->
-        <div class="volunteer-heading">
-          <h2>Volunteer with us</h2>
-          <p>A few hours of your time can make a real difference.</p>
-          <p class="volunteer-intro-text">We're building a network of people who are ready to help when the need arises — whether that's on the ground, online, or behind the scenes. Fill out the volunteer form below so we can match opportunities with your interests and availability.</p>
+    <!-- Hero Section -->
+    <section class="volunteer-hero">
+      <img src="images/home/volunteer.jpg" alt="Volunteer" />
+      <div class="volunteer-hero-overlay">
+        <div class="volunteer-hero-content">
+          <h1>Encouraging Change Makers</h1>
+          <p>Join our community of volunteers ready to make a real impact</p>
         </div>
+      </div>
+    </section>
 
-        <!-- Volunteer Form -->
-        <form class="volunteer-form" action="/submit-volunteer" method="POST">
+    <!-- Volunteer Form Section -->
+    <section class="section volunteer-section">
+      <div class="container">
+        <div class="volunteer-content">
+          <!-- Heading -->
+          <div class="volunteer-heading">
+            <h2>Volunteer with us</h2>
+            <p>A few hours of your time can make a real difference.</p>
+            <p class="volunteer-intro-text">
+              We're building a network of people who are ready to help when the
+              need arises — whether that's on the ground, online, or behind the
+              scenes. Fill out the volunteer form below so we can match
+              opportunities with your interests and availability.
+            </p>
+          </div>
 
-          <!-- Basic Info -->
-          <div class="form-group">
-            <label for="fullName">Full Name <span class="required">*</span></label>
-            <input type="text" id="fullName" name="fullName" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group phone-group">
-            <label for="phone">Phone Number <span class="required">*</span></label>
-            <div class="phone-input-wrapper">
-              <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
-              <input type="hidden" id="phoneCountry" name="phoneCountry">
-              <input type="hidden" id="phoneNumberOnly" name="phoneNumberOnly">
+          <!-- Volunteer Form -->
+          <form class="volunteer-form" action="/submit-volunteer" method="POST">
+            <!-- Basic Info -->
+            <div class="form-group">
+              <label for="fullName"
+                >Full Name <span class="required">*</span></label
+              >
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="email"
+                >Email Address <span class="required">*</span></label
+              >
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group phone-group">
+              <label for="phone"
+                >Phone Number <span class="required">*</span></label
+              >
+              <div class="phone-input-wrapper">
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter phone number"
+                  required
+                />
+                <input type="hidden" id="phoneCountry" name="phoneCountry" />
+                <input
+                  type="hidden"
+                  id="phoneNumberOnly"
+                  name="phoneNumberOnly"
+                />
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="form-group">
+              <label for="city"
+                >City / Location <span class="required">*</span></label
+              >
+              <input type="text" id="city" name="city" required />
+            </div>
+
+            <!-- Time Commitment -->
+            <div class="form-group">
+              <label for="commitment"
+                >Time commitment <span class="required">*</span></label
+              >
+              <select id="commitment" name="commitment" required>
+                <option value="">Select</option>
+                <option value="one-time">One-time volunteering</option>
+                <option value="occasional">
+                  Occasional (1–2 times / month)
+                </option>
+                <option value="ongoing">Long-term / ongoing</option>
+              </select>
+            </div>
+
+            <!-- Interests/Skills/Impact Areas -->
+            <div class="form-group">
+              <label for="skills">Your Interests (optional)</label>
+              <textarea
+                id="skills"
+                name="skills"
+                placeholder="Share your interests, skills, or areas where you'd like to contribute or see change happen"
+              ></textarea>
+            </div>
+
+            <!-- Consent -->
+            <div class="form-group consent-checkbox">
+              <label>
+                <input type="checkbox" name="consent" required />
+                I understand that I may be contacted for suitable opportunities
+                <span class="required">*</span>
+              </label>
+            </div>
+
+            <!-- Newsletter Subscription -->
+            <div class="form-group consent-checkbox">
+              <label>
+                <input type="checkbox" name="newsletter" />
+                Subscribe to our newsletter for more updates
+              </label>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="btn btn-primary btn-large">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Contact Section -->
+          <div id="contact" class="footer-section">
+            <h3>Contact Us</h3>
+            <div class="contact-placeholder">
+              <p>
+                Get in touch with us for inquiries, partnerships, or
+                volunteering opportunities.
+              </p>
+              <p class="contact-info">Email: info@changewillhappen.org</p>
+              <p class="contact-info">Phone: Coming soon</p>
             </div>
           </div>
 
-          <!-- Location -->
-          <div class="form-group">
-            <label for="city">City / Location <span class="required">*</span></label>
-            <input type="text" id="city" name="city" required>
+          <!-- Newsletter Section -->
+          <div id="newsletter" class="footer-section">
+            <h3>Sign Up</h3>
+            <div class="newsletter-placeholder">
+              <p>
+                Subscribe to our newsletter for updates on our missions and
+                impact.
+              </p>
+              <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required />
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+              </form>
+            </div>
           </div>
 
-          <!-- Time Commitment -->
-          <div class="form-group">
-            <label for="commitment">Time commitment <span class="required">*</span></label>
-            <select id="commitment" name="commitment" required>
-              <option value="">Select</option>
-              <option value="one-time">One-time volunteering</option>
-              <option value="occasional">Occasional (1–2 times / month)</option>
-              <option value="ongoing">Long-term / ongoing</option>
-            </select>
-          </div>
-
-          <!-- Interests/Skills/Impact Areas -->
-          <div class="form-group">
-            <label for="skills">Your Interests (optional)</label>
-            <textarea id="skills" name="skills" placeholder="Share your interests, skills, or areas where you'd like to contribute or see change happen"></textarea>
-          </div>
-
-          <!-- Consent -->
-          <div class="form-group consent-checkbox">
-            <label>
-              <input type="checkbox" name="consent" required>
-              I understand that I may be contacted for suitable opportunities <span class="required">*</span>
-            </label>
-          </div>
-
-          <!-- Newsletter Subscription -->
-          <div class="form-group consent-checkbox">
-            <label>
-              <input type="checkbox" name="newsletter">
-              Subscribe to our newsletter for more updates
-            </label>
-          </div>
-
-          <!-- Submit -->
-          <button type="submit" class="btn btn-primary btn-large">Submit</button>
-
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Contact Section -->
-        <div id="contact" class="footer-section">
-          <h3>Contact Us</h3>
-          <div class="contact-placeholder">
-            <p>Get in touch with us for inquiries, partnerships, or volunteering opportunities.</p>
-            <p class="contact-info">Email: info@changewillhappen.org</p>
-            <p class="contact-info">Phone: Coming soon</p>
+          <!-- Donate Section -->
+          <div id="donate" class="footer-section">
+            <h3>Support Our Mission</h3>
+            <p>
+              Your donation helps us continue providing essential care to
+              underserved communities.
+            </p>
+            <a href="donate.html" class="btn btn-donate-large">Donate Now</a>
+            <p class="tax-note">All donations are tax-deductible.</p>
           </div>
         </div>
 
-        <!-- Newsletter Section -->
-        <div id="newsletter" class="footer-section">
-          <h3>Sign Up</h3>
-          <div class="newsletter-placeholder">
-            <p>Subscribe to our newsletter for updates on our missions and impact.</p>
-            <form class="newsletter-form">
-              <input type="email" placeholder="Enter your email" required>
-              <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
+        <div class="footer-bottom">
+          <div class="footer-brand">
+            <img
+              src="images/shared/logo.png"
+              alt="Change Will Happen"
+              class="footer-logo"
+            />
+            <p>Making the world a healthier place one step at a time</p>
           </div>
-        </div>
-
-        <!-- Donate Section -->
-        <div id="donate" class="footer-section">
-          <h3>Support Our Mission</h3>
-          <p>Your donation helps us continue providing essential care to underserved communities.</p>
-          <a href="donate.html" class="btn btn-donate-large">Donate Now</a>
-          <p class="tax-note">All donations are tax-deductible.</p>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div class="footer-brand">
-          <img src="images/shared/logo.png" alt="Change Will Happen" class="footer-logo">
-          <p>Making the world a healthier place one step at a time</p>
-        </div>
           <a href="team.html" class="footer-about-link">About Us</a>
-      <div class="footer-copyright">
-          <p>&copy; 2024 Change Will Happen. All rights reserved.</p>
-          <p class="credits">Proudly created by Arihunt & Avni Garg</p>
-          <p>501(c)(3) Non-profit Organization</p>
+          <div class="footer-copyright">
+            <p>&copy; 2024 Change Will Happen. All rights reserved.</p>
+            <p class="credits">Proudly created by Arihunt & Avni Garg</p>
+            <p>501(c)(3) Non-profit Organization</p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/intlTelInput.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.4.0/build/js/intlTelInput.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

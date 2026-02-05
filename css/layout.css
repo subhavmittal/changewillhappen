@@ -163,6 +163,7 @@
   background: rgba(255, 255, 255, 0.1);
   color: var(--white);
   font-size: 1.05rem;
+  font-family: "Lato", Arial, sans-serif;
 }
 
 .newsletter-form input::placeholder {
