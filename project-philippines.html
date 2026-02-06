@@ -58,9 +58,13 @@
               <li><a href="project-covid.html">COVID Relief</a></li>
               <li><a href="project-battery.html">The Battery Project</a></li>
               <li>
-                <a href="project-philippines.html"
-                  >Medical Mission to Philippines</a
-                >
+                <a href="medical-missions.html">Medical Missions</a>
+              </li>
+              <li>
+                <a href="project-community-movement.html">Community Movement</a>
+              </li>
+              <li>
+                <a href="project-urban-gardening.html">Urban Gardening</a>
               </li>
             </ul>
           </li>
@@ -94,7 +98,7 @@
     </section>
 
     <!-- Project Overview -->
-    <section class="section project-overview" style="padding-bottom: 0px;">
+    <section class="section project-overview">
       <div class="container">
         <div class="project-content" style="max-width: 100%;">
           <div class="project-intro">
@@ -113,13 +117,13 @@
     </section>
 
     <!-- Challenge Section -->
-    <section class="section project-initiatives">
+    <section class="section project-initiatives" style="padding-top: 0;">
       <div class="container">
-        <h2 class="section-title">Multiple Crises</h2>
+        <h2 class="section-title" style="color: var(--accent-red);">Multiple Crises</h2>
         <div
           style="
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            grid-template-columns: 1.4fr 1fr;
             gap: var(--spacing-xl);
             align-items: center;
           "
@@ -130,11 +134,24 @@
             </p>
           </div>
           <div class="context-image" style="width: 100%">
-            <img
-              src="images/philippines_project/img1.jpg"
-              alt="Multiple Crises"
-              style="width: 100%; border-radius: 8px"
-            />
+            <figure style="margin: 0">
+              <img
+                src="images/philippines_project/img1.jpg"
+                alt="Volunteer team traveling to remote villages in Mindoro"
+                style="width: 100%; border-radius: 8px"
+              />
+              <figcaption
+                style="
+                  text-align: center;
+                  margin-top: 0.75rem;
+                  font-size: 1.05rem;
+                  color: var(--medium-text);
+                  font-weight: 500;
+                "
+              >
+                Our volunteer team in partnership with Mano-A-Mano Philippines
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -145,8 +162,8 @@
       <div class="container">
         <h2 class="section-title">Our Response</h2>
 
-        <div class="impact-stats">
-          <div class="stat-card" style="max-width: 300px;">
+        <div class="impact-stats" style="display: flex; justify-content: center;">
+          <div class="stat-card" style="min-width: 300px;">
             <div class="stat-number">$16,000+</div>
             <div class="stat-label">Funds Raised</div>
           </div>
@@ -154,14 +171,14 @@
 
         <div
           class="distribution-section"
-          style="max-width: 900px; margin: 0 auto"
+          style="max-width: 900px; margin: var(--spacing-lg) auto 0"
         >
           <h3
             style="
-              color: var(--accent-red);
-              font-size: 1.5rem;
+              color: var(--primary-green);
+              font-size: 2.25rem;
               text-align: center;
-              margin-bottom: var(--spacing-lg);
+              margin-bottom: var(--spacing-sm);
             "
           >
             Medical Services Provided
@@ -170,8 +187,8 @@
             style="
               text-align: center;
               margin-bottom: var(--spacing-lg);
-              color: var(--medium-text);
-              font-size: 1rem;
+              color: var(--dark-text);
+              font-size: 1.125rem;
               line-height: 1.6;
             "
           >
@@ -181,130 +198,231 @@
           <div
             style="
               display: grid;
-              grid-template-columns: repeat(2, 1fr);
+              grid-template-columns: repeat(3, 1fr);
               gap: var(--spacing-md);
+              max-width: 1000px;
+              margin: 0 auto;
             "
           >
             <div
               style="
-                background-color: var(--primary-green);
+                background-color: var(--white);
                 padding: var(--spacing-md);
                 border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--primary-green);
               "
             >
-              <strong
+              <div
                 style="
-                  color: var(--white);
-                  font-size: 1rem;
-                  display: block;
-                  margin-bottom: var(--spacing-xs);
+                  font-family: 'Merriweather', Georgia, serif;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: var(--primary-green);
+                  margin-bottom: 0.5rem;
                 "
-                >Nutritional Deficiencies</strong
               >
-              <p style="margin: 0; color: var(--white); font-size: 0.9rem">
+                Nutritional Deficiencies
+              </div>
+              <p style="font-size: 1.05rem; color: var(--dark-text); line-height: 1.6; margin: 0;">
                 Support for malnourishment
               </p>
             </div>
             <div
               style="
-                background-color: var(--primary-green);
+                background-color: var(--white);
                 padding: var(--spacing-md);
                 border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--primary-green);
               "
             >
-              <strong
+              <div
                 style="
-                  color: var(--white);
-                  font-size: 1rem;
-                  display: block;
-                  margin-bottom: var(--spacing-xs);
+                  font-family: 'Merriweather', Georgia, serif;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: var(--primary-green);
+                  margin-bottom: 0.5rem;
                 "
-                >Chronic Conditions</strong
               >
-              <p style="margin: 0; color: var(--white); font-size: 0.9rem">
+                Chronic Conditions
+              </div>
+              <p style="font-size: 1.05rem; color: var(--dark-text); line-height: 1.6; margin: 0;">
                 Treatment for hypertension and diabetes
               </p>
             </div>
             <div
               style="
-                background-color: var(--primary-green);
+                background-color: var(--white);
                 padding: var(--spacing-md);
                 border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--primary-green);
               "
             >
-              <strong
+              <div
                 style="
-                  color: var(--white);
-                  font-size: 1rem;
-                  display: block;
-                  margin-bottom: var(--spacing-xs);
+                  font-family: 'Merriweather', Georgia, serif;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: var(--primary-green);
+                  margin-bottom: 0.5rem;
                 "
-                >Respiratory Illness</strong
               >
-              <p style="margin: 0; color: var(--white); font-size: 0.9rem">
+                Respiratory Illness
+              </div>
+              <p style="font-size: 1.05rem; color: var(--dark-text); line-height: 1.6; margin: 0;">
                 Care for breathing problems from volcanic ash
               </p>
             </div>
             <div
               style="
-                background-color: var(--primary-green);
+                background-color: var(--white);
                 padding: var(--spacing-md);
                 border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--primary-green);
               "
             >
-              <strong
+              <div
                 style="
-                  color: var(--white);
-                  font-size: 1rem;
-                  display: block;
-                  margin-bottom: var(--spacing-xs);
+                  font-family: 'Merriweather', Georgia, serif;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: var(--primary-green);
+                  margin-bottom: 0.5rem;
                 "
-                >Infections</strong
               >
-              <p style="margin: 0; color: var(--white); font-size: 0.9rem">
+                Infections
+              </div>
+              <p style="font-size: 1.05rem; color: var(--dark-text); line-height: 1.6; margin: 0;">
                 Treatment for abscesses and other infections
               </p>
             </div>
             <div
               style="
-                background-color: var(--primary-green);
+                background-color: var(--white);
                 padding: var(--spacing-md);
                 border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--primary-green);
               "
             >
-              <strong
+              <div
                 style="
-                  color: var(--white);
-                  font-size: 1rem;
-                  display: block;
-                  margin-bottom: var(--spacing-xs);
+                  font-family: 'Merriweather', Georgia, serif;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: var(--primary-green);
+                  margin-bottom: 0.5rem;
                 "
-                >Vision Care</strong
               >
-              <p style="margin: 0; color: var(--white); font-size: 0.9rem">
+                Vision Care
+              </div>
+              <p style="font-size: 1.05rem; color: var(--dark-text); line-height: 1.6; margin: 0;">
                 Support for visual impairment
               </p>
             </div>
             <div
               style="
-                background-color: var(--primary-green);
+                background-color: var(--white);
                 padding: var(--spacing-md);
                 border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                border-left: 4px solid var(--primary-green);
               "
             >
-              <strong
+              <div
                 style="
-                  color: var(--white);
-                  font-size: 1rem;
-                  display: block;
-                  margin-bottom: var(--spacing-xs);
+                  font-family: 'Merriweather', Georgia, serif;
+                  font-size: 1.2rem;
+                  font-weight: 700;
+                  color: var(--primary-green);
+                  margin-bottom: 0.5rem;
                 "
-                >Environmental Health</strong
               >
-              <p style="margin: 0; color: var(--white); font-size: 0.9rem">
+                Environmental Health
+              </div>
+              <p style="font-size: 1.05rem; color: var(--dark-text); line-height: 1.6; margin: 0;">
                 Response to ash exposure and respiratory vulnerability
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section project-gallery">
+      <div class="container">
+        <h2 class="section-title">Mission In Action</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <figure style="margin: 0">
+              <img
+                src="images/philippines_project/action1.jpg"
+                alt="Community members waiting to receive care and supplies"
+                style="width: 100%; border-radius: 8px"
+              />
+              <figcaption
+                style="
+                  text-align: center;
+                  margin-top: 0.75rem;
+                  font-size: 1.05rem;
+                  color: var(--medium-text);
+                  font-weight: 500;
+                "
+              >
+                Community members waiting to receive care and supplies
+              </figcaption>
+            </figure>
+          </div>
+          <div class="gallery-item">
+            <figure style="margin: 0">
+              <img
+                src="images/philippines_project/action2.jpg"
+                alt="Volunteers providing medical treatment to a patient"
+                style="width: 100%; border-radius: 8px"
+              />
+              <figcaption
+                style="
+                  text-align: center;
+                  margin-top: 0.75rem;
+                  font-size: 1.05rem;
+                  color: var(--medium-text);
+                  font-weight: 500;
+                "
+              >
+                Volunteers providing medical treatment to a patient
+              </figcaption>
+            </figure>
+          </div>
+          <div class="gallery-item">
+            <figure style="margin: 0">
+              <img
+                src="images/philippines_project/action3.jpg"
+                alt="Supplies prepared for distribution to the community"
+                style="width: 100%; border-radius: 8px"
+              />
+              <figcaption
+                style="
+                  text-align: center;
+                  margin-top: 0.75rem;
+                  font-size: 1.05rem;
+                  color: var(--medium-text);
+                  font-weight: 500;
+                "
+              >
+                Supplies prepared for distribution to the community
+              </figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -314,38 +432,40 @@
     <section class="section project-partners">
       <div class="container">
         <h2 class="section-title">Environmental Conservation</h2>
-        <div class="partners-content">
-          <p>
+        <div class="partners-content" style="max-width: 100%">
+          <p style="font-size: 1.1rem;">
             The Mindoro region is also home to unique and endangered wildlife
-            that has been affected by the same environmental challenges:
+            that has been affected by the same environmental challenges.
+            Deforestation has affected Mangyan nutrition and livelihoods,
+            flooding has spread disease through communities, and habitat loss
+            has threatened local wildlife species.
           </p>
 
-          <div class="volunteer-team" style="margin-bottom: var(--spacing-lg)">
-            <h4>The Mindoro Hornbill</h4>
-            <p>
-              This beautiful but tiny bird (it's only 10cm long) is endemic to
-              the Philippines and is found only in Mindoro. Its small population
-              is rapidly declining. It has been classified as Vulnerable by the
-              International Union for Conservation of Nature (IUCN) Red List of
-              Threatened Species due to habitat loss. On top of that, there
-              isn't a lot of research about them, so it becomes even harder to
-              save them without the proper funds and support. The eruption of
-              Volcano Taal has made conditions worse for this beautiful bird.
-            </p>
-          </div>
-
-          <div class="partners-list">
-            <div class="partner-item">
-              <h4>Deforestation Impact</h4>
-              <p>Affected Mangyan nutrition and livelihoods</p>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: var(--spacing-xl);
+              align-items: center;
+              margin-top: var(--spacing-md);
+              margin-bottom: var(--spacing-lg);
+            "
+          >
+            <div class="volunteer-team" style="margin-bottom: 0">
+              <h4>The Mindoro Hornbill</h4>
+              <p>
+                This tiny bird (only 10cm long) is endemic to Mindoro and
+                classified as Vulnerable on the IUCN Red List due to habitat
+                loss. The eruption of Volcano Taal has made conditions even
+                worse, and limited research makes conservation harder.
+              </p>
             </div>
-            <div class="partner-item">
-              <h4>Flooding</h4>
-              <p>Spread disease through communities</p>
-            </div>
-            <div class="partner-item">
-              <h4>Habitat Loss</h4>
-              <p>Threatened local wildlife species</p>
+            <div style="text-align: center">
+              <img
+                src="images/philippines_project/mindoro_hornbill.jpg"
+                alt="The Mindoro Hornbill"
+                style="width: 100%; max-width: 400px; border-radius: 8px"
+              />
             </div>
           </div>
 
@@ -361,42 +481,6 @@
               unstable and access is limited. I couldn't have asked for a more
               rewarding experience.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="section project-gallery">
-      <div class="container">
-        <h2 class="section-title">Mission In Action</h2>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <figure style="margin: 0">
-              <img
-                src="images/philippines_project/action1.jpg"
-                alt="Mission Journey"
-                style="width: 100%; border-radius: 8px"
-              />
-            </figure>
-          </div>
-          <div class="gallery-item">
-            <figure style="margin: 0">
-              <img
-                src="images/philippines_project/action2.jpg"
-                alt="Mission Journey"
-                style="width: 100%; border-radius: 8px"
-              />
-            </figure>
-          </div>
-          <div class="gallery-item">
-            <figure style="margin: 0">
-              <img
-                src="images/philippines_project/action3.jpg"
-                alt="Mission Journey"
-                style="width: 100%; border-radius: 8px"
-              />
-            </figure>
           </div>
         </div>
       </div>
