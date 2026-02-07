@@ -123,6 +123,7 @@
 .mission-section {
   background-color: var(--earth-beige);
   padding-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-md);
 }
 
 /* Mission Hero - Statement and Button inline */
@@ -158,12 +159,28 @@
   align-items: center;
 }
 
-.mission-image img {
+.mission-image figure {
+  margin: 0;
   width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission-image img {
+  width: 100%;
   border-radius: 12px;
   object-fit: cover;
   aspect-ratio: 4/3;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.mission-image figcaption {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--medium-text);
+  margin-top: 0.75rem;
+  font-style: italic;
 }
 
 .mission-text {
