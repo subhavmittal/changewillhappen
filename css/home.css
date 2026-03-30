@@ -121,7 +121,10 @@
   align-items: center;
   justify-content: center;
   line-height: 1;
+  letter-spacing: 0.35em;
   transform: scaleY(1.48);
+  font-weight: 900;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Mission Section */
