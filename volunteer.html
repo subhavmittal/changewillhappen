@@ -116,7 +116,9 @@
           </div>
 
           <!-- Volunteer Form -->
-          <form class="volunteer-form" action="/submit-volunteer" method="POST">
+          <form class="volunteer-form" name="volunteer" method="POST" netlify netlify-honeypot="bot-field">
+            <!-- Honeypot field for spam prevention (hidden from users) -->
+            <input type="hidden" name="bot-field" />
             <!-- Basic Info -->
             <div class="form-group">
               <label for="fullName"

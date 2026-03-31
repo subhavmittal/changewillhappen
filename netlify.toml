@@ -37,3 +37,13 @@ Cache-Control = "public, max-age=2592000"
 for = "/*.html"
 [headers.values]
 Cache-Control = "public, max-age=86400"
+
+# Form submission success page redirects
+[[redirects]]
+from = "/success"
+to = "/?form=success"
+status = 200
+
+# Handle form submissions
+# Note: Netlify automatically detects forms with netlify attribute
+# Form submissions are stored in Netlify > Forms

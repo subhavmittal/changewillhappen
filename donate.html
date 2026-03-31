@@ -108,6 +108,9 @@
             serve underserved communities and promote environmental
             sustainability.
           </p>
+          <p style="background-color: var(--light-bg); padding: 1rem; border-radius: 8px; font-style: italic; color: var(--medium-text);">
+            <strong>Note:</strong> Online donations will be available soon through our PayPal portal. Please fill out the form below to be notified when we're ready to accept donations.
+          </p>
 
           <div class="donation-impact-examples">
             <h3>How Your Gift Helps</h3>
@@ -145,99 +148,15 @@
     <section class="section donate-section">
       <div class="container">
         <div class="donate-content">
-          <!-- Donation Form -->
-          <form class="donate-form" action="/submit-donation" method="POST">
-            <!-- Donation Amount -->
-            <div class="form-group donation-amount-group">
-              <label
-                >Select Donation Amount <span class="required">*</span></label
-              >
-              <div class="amount-options">
-                <div class="amount-option">
-                  <input
-                    type="radio"
-                    id="amount25"
-                    name="donationAmount"
-                    value="25"
-                    required
-                  />
-                  <label for="amount25">$25</label>
-                </div>
-                <div class="amount-option">
-                  <input
-                    type="radio"
-                    id="amount50"
-                    name="donationAmount"
-                    value="50"
-                  />
-                  <label for="amount50">$50</label>
-                </div>
-                <div class="amount-option">
-                  <input
-                    type="radio"
-                    id="amount100"
-                    name="donationAmount"
-                    value="100"
-                  />
-                  <label for="amount100">$100</label>
-                </div>
-                <div class="amount-option">
-                  <input
-                    type="radio"
-                    id="amount250"
-                    name="donationAmount"
-                    value="250"
-                  />
-                  <label for="amount250">$250</label>
-                </div>
-                <div class="amount-option">
-                  <input
-                    type="radio"
-                    id="amount500"
-                    name="donationAmount"
-                    value="500"
-                  />
-                  <label for="amount500">$500</label>
-                </div>
-                <div class="amount-option custom-amount">
-                  <input
-                    type="radio"
-                    id="amountCustom"
-                    name="donationAmount"
-                    value="custom"
-                  />
-                  <label for="amountCustom">Custom Amount</label>
-                </div>
-              </div>
-              <div
-                class="custom-amount-input"
-                id="customAmountInput"
-                style="display: none; margin-top: var(--spacing-sm)"
-              >
-                <input
-                  type="number"
-                  id="customAmount"
-                  name="customAmount"
-                  placeholder="Enter amount"
-                  min="1"
-                  step="0.01"
-                />
-              </div>
-            </div>
+          <div style="background-color: var(--light-bg); padding: 2rem; border-radius: 8px; margin-bottom: 2rem; border-left: 4px solid var(--accent-color);">
+            <h3 style="margin-top: 0; color: var(--accent-color);">Coming Soon</h3>
+            <p>We're currently setting up secure online donations through PayPal. In the meantime, we'd love to hear from you! Fill out the form below and we'll contact you as soon as we're ready to accept donations.</p>
+          </div>
 
-            <!-- Donation Frequency -->
-            <div class="form-group">
-              <label for="frequency"
-                >Donation Type <span class="required">*</span></label
-              >
-              <select id="frequency" name="frequency" required>
-                <option value="">Select</option>
-                <option value="one-time">One-time donation</option>
-                <option value="monthly">Monthly recurring donation</option>
-                <option value="quarterly">Quarterly recurring donation</option>
-                <option value="annual">Annual recurring donation</option>
-              </select>
-            </div>
+          <!-- Donation Interest Form -->
+          <form class="donate-form" name="donation-interest" method="POST" netlify netlify-honeypot="bot-field">
+            <!-- Honeypot field for spam prevention (hidden from users) -->
+            <input type="hidden" name="bot-field" />
 
             <!-- Donor Information -->
             <div class="form-group">
@@ -255,38 +174,24 @@
             </div>
 
             <div class="form-group phone-group">
-              <label for="phone">Phone Number <span class="required">*</span></label>
+              <label for="phone">Phone Number (Optional)</label>
               <div class="phone-input-wrapper">
-                <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
                 <input type="hidden" id="phoneCountry" name="phoneCountry">
                 <input type="hidden" id="phoneNumberOnly" name="phoneNumberOnly">
               </div>
             </div>
 
-            <!-- Dedication -->
+            <!-- Interest Message -->
             <div class="form-group">
-              <label for="dedication">Dedication (Optional)</label>
-              <textarea
-                id="dedication"
-                name="dedication"
-                placeholder="In honor of / In memory of"
-              ></textarea>
-            </div>
-
-            <!-- Anonymous Donation -->
-            <div class="form-group consent-checkbox">
-              <label>
-                <input type="checkbox" name="anonymous" />
-                Make this an anonymous donation
-              </label>
-            </div>
-
-            <!-- Comments -->
-            <div class="form-group">
-              <label for="comments"
-                >Comments or Special Instructions (Optional)</label
+              <label for="message"
+                >How would you like to support us? (Optional)</label
               >
-              <textarea id="comments" name="comments"></textarea>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your donation interests, recurring vs one-time, or any special instructions"
+              ></textarea>
             </div>
 
             <!-- Newsletter Subscription -->
@@ -299,13 +204,12 @@
 
             <!-- Submit -->
             <button type="submit" class="btn btn-primary btn-large">
-              Proceed to Payment
+              Notify Me When Ready
             </button>
           </form>
 
           <p class="form-note">
-            After submitting, you will be redirected to a secure payment page.
-            You will receive a tax receipt via email upon payment completion.
+            We'll send you an email as soon as online donations are available. You'll also receive a tax receipt for any donations made.
           </p>
         </div>
       </div>
