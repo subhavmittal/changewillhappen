@@ -4,12 +4,6 @@
 # No build command needed - static site
 publish = "."
 
-# Redirect rules
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-
 # Performance headers
 [[headers]]
 for = "/*"
