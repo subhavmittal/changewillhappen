@@ -1,0 +1,163 @@
+/* Birthday Section (temporary)
+   Hidden unless the page is opened with ?mystery */
+
+.birthday-section {
+  background-color: var(--creamish-white);
+  overflow: hidden;
+}
+
+.birthday-inner {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.birthday-title {
+  font-family: "Merriweather", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--primary-green);
+  margin: 0 0 var(--spacing-sm);
+}
+
+.birthday-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin-top: var(--spacing-sm);
+  background: var(--accent-red);
+  border-radius: 2px;
+}
+
+.birthday-message {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--new-textcolor);
+  margin-bottom: 0;
+}
+
+/* Keep faces in frame when photos are cropped */
+.birthday-photo--team img {
+  object-position: 20% 30%;
+}
+.birthday-photo--philippines img {
+  object-position: 70% 20%;
+}
+.birthday-photo--crafting img {
+  object-position: 50% 15%;
+}
+.birthday-photo--clinic img {
+  object-position: 50% 35%;
+}
+.birthday-photo--group img {
+  object-position: 55% 25%;
+}
+
+/* ---------- Polaroid scatter ---------- */
+
+.birthday-collage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.birthday-photo {
+  position: absolute;
+  margin: 0;
+  width: 32%;
+  padding: 2.5% 2.5% 8%;
+  background: var(--white);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+  transform: rotate(var(--tilt));
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.birthday-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.birthday-photo:hover {
+  transform: rotate(0deg) scale(1.06);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.birthday-photo--team {
+  top: 4%;
+  left: 0;
+  --tilt: -6deg;
+}
+.birthday-photo--avni {
+  top: 0;
+  left: 32%;
+  width: 36%;
+  z-index: 5;
+  --tilt: 2deg;
+}
+.birthday-photo--clinic {
+  top: 5%;
+  left: 68%;
+  --tilt: 6deg;
+}
+.birthday-photo--philippines {
+  top: 50%;
+  left: 2%;
+  --tilt: 4deg;
+}
+.birthday-photo--group {
+  top: 54%;
+  left: 34%;
+  --tilt: -3deg;
+}
+.birthday-photo--crafting {
+  top: 50%;
+  left: 67%;
+  --tilt: -6deg;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 968px) {
+  .birthday-inner {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .birthday-text {
+    text-align: center;
+  }
+
+  .birthday-title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .birthday-collage {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .birthday-collage {
+    aspect-ratio: 5 / 8;
+  }
+
+  .birthday-photo,
+  .birthday-photo--avni {
+    width: 48%;
+  }
+
+  .birthday-photo--avni { top: 0; left: 0; }
+  .birthday-photo--team { top: 2%; left: 52%; }
+  .birthday-photo--clinic { top: 34%; left: 1%; }
+  .birthday-photo--philippines { top: 33%; left: 51%; }
+  .birthday-photo--group { top: 67%; left: 0; }
+  .birthday-photo--crafting { top: 66%; left: 52%; }
+}

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/birthday.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Lato:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -150,6 +151,47 @@
         </div>
       </div>
     </section>
+
+    <!-- Birthday Section (temporary) -->
+    <section id="birthday" class="section birthday-section" hidden>
+      <div class="container birthday-inner">
+        <div class="birthday-text">
+          <p class="section-label">It's a big day!</p>
+          <h2 class="birthday-title">Happy Birthday, Avni!</h2>
+          <p class="birthday-message">
+            Hope today is full of good vibes, great company
+            and lots of cake. Keep being amazing and have the best year ahead! 
+          </p>
+
+        </div>
+        <div class="birthday-collage">
+          <figure class="birthday-photo birthday-photo--team">
+            <img src="images/home/birthday/haiti-team.webp" alt="Avni with team members at a medical mission in Haiti" loading="lazy" />
+          </figure>
+          <figure class="birthday-photo birthday-photo--clinic">
+            <img src="images/home/birthday/haiti-clinic.webp" alt="Avni checking a patient's blood pressure in Haiti" loading="lazy" />
+          </figure>
+          <figure class="birthday-photo birthday-photo--philippines">
+            <img src="images/home/birthday/philippines.webp" alt="Avni with a health worker in the Philippines" loading="lazy" />
+          </figure>
+          <figure class="birthday-photo birthday-photo--crafting">
+            <img src="images/home/birthday/crafting.webp" alt="Avni smiling while working on a project at home" loading="lazy" />
+          </figure>
+          <figure class="birthday-photo birthday-photo--group">
+            <img src="images/home/birthday/philippines-group.webp" alt="Avni with fellow volunteers holding Mano-a-Mano Philippines bags" loading="lazy" />
+          </figure>
+          <figure class="birthday-photo birthday-photo--avni">
+            <img src="images/home/birthday/avni.webp" alt="Portrait of Avni Garg, President of Change Will Happen" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <script>
+      // Temporary: only shown with ?mystery
+      if (new URLSearchParams(location.search).has("mystery")) {
+        document.getElementById("birthday").hidden = false;
+      }
+    </script>
 
     <!-- Mission Section -->
     <section id="about" class="section mission-section">
